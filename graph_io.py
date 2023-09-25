@@ -38,7 +38,7 @@ def connected_components_alternative1(edges):
 
     return len(components)
 
-
+# A second alternative solution using igraph
 def connected_components_alternative2(edges):
 
     graph = igraph.Graph.TupleList(edges)
@@ -123,9 +123,8 @@ if __name__ == "__main__":
                 # V, E = mk_instance(n, k, r)
                 # write_instance(V, E, filename)
 
-
                 # # uncomment for reading graphs from files method: 
-                # V, E = read_instance(filename)
+                V, E = read_instance(filename)
                 
                 # # uncomment for creating benchmark set in memory method:
                 # V, E = mk_instance(n, k, r)
@@ -174,7 +173,7 @@ if __name__ == "__main__":
                 
                 # # instead of printing this to the terminal, we write it to a file
                 with open("results.txt", "a") as f:
-                    f.write(f"{filename}: {ncomponents_own} components, {cpu} seconds\n")
+                    f.write(f"{filename}: {ncomponents_own} components, Alt1: {cpu} seconds, Alt2: {cpu_alt2} seconds\n")
 
     
     # catching the mismatch
@@ -183,13 +182,13 @@ if __name__ == "__main__":
     
     # output of total time
     print(f"Total time for the professor's method: {total_time_prof} seconds")
-    print(f"Total time for our own method: {total_time_own} seconds")
+    print(f"Total time for our alt1 method: {total_time_own} seconds")
     print(f"Total time for our alt2 method: {total_time_alt2} seconds")
 
     # also write the total time to the file
     with open("results.txt", "a") as f:
         f.write(f"Total time for the professor's method: {total_time_prof} seconds\n")
-        f.write(f"Total time for our own method: {total_time_own} seconds\n")
+        f.write(f"Total time for our alt1 method: {total_time_own} seconds\n")
         f.write(f"Total time for our alt2 method: {total_time_alt2} seconds\n")
 
 
