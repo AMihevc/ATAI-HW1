@@ -9,7 +9,7 @@ from hw1_prof_solution import connected_components
 # increase recursion limit for our method to work properly with large graphs
 sys.setrecursionlimit(100001)
 
-# Manuel's recursive solution
+# Miguel's recursive solution
 def connected_components_alternative1(edges):
     def dfs(node):
         visited.add(node)

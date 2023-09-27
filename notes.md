@@ -10,10 +10,8 @@
 * best way to travers the grpahs when searching for connected components? 
 
 
-
 ## Best algorithm gets 1 bonus point 
 
 How to compare results: 
 * check if inputs is correct 
 * set of benchmark instances (2 sets one known and one unknown for evaluation)
-* 
